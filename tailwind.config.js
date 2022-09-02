@@ -20,7 +20,10 @@ module.exports = {
     extend: {
       fontFamily: {
         'gruppo': ['Gruppo'],
-     }
+      },
+      colors: {
+        'iris': ['#4444DA'],
+      },
     },
   },
   plugins: [],
