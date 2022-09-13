@@ -11,9 +11,12 @@
     "@heroicons/react": "^2.0.10",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.3.0",
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
+    "@types/react": "^18.0.18",
     "autoprefixer": "^10.4.8",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",

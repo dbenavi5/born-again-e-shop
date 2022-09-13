@@ -1,10 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
+// import Image from "next/image";
 import React from "react";
 
 export default function Footer() {
   return (
     <div className="flex flex-col tablet:flex-row laptop:flex-row shadow-inner mb-5">
       {/* left */}
-      <div className="flex flex-1 flex-col p-4">
+      <div className="flex flex-1 ml-4 flex-col p-4">
         <h1 className="font-black text-lg laptop:text-2xl">
           Born Again Thrift
         </h1>
@@ -104,8 +106,8 @@ export default function Footer() {
         <p className="pt-5">Copyright © 2022 Born Again Thrift SF</p>
       </div>
       {/* center */}
-      <div className="flex-1 p-4">
-        <h3 className="font-black mb-3">Useful Link</h3>
+      <div className="flex flex-1 ml-4 flex-col p-4">
+        <h3 className="font-black mb-3">Useful Links</h3>
         <ul className="m-0 p-0 flex flex-wrap list-none">
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
             Home
@@ -138,7 +140,7 @@ export default function Footer() {
       </div>
 
       {/* right */}
-      <div className="flex-1 p-4">
+      <div className="flex flex-1 ml-4 flex-col p-4">
         <h3 className="mb-3 font-black">Contact</h3>
         <div className="mb-5 flex items-center cursor-pointer hover:text-blue-600">
           <svg
@@ -191,6 +193,14 @@ export default function Footer() {
           </svg>
           &nbsp;contact@bornagainthriftsf.dev
         </div>
+        {/* <div className='w-full'>
+          <Image
+            src="/images/payment.png"
+            alt="payment"
+            width="100%"
+            height={30}
+          />
+        </div> */}
       </div>
     </div>
   );
