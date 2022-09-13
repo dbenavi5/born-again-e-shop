@@ -23,3 +23,11 @@ description:
     d. show product info in second column
     e.show add to cart in third column
     f. add styles
+8. Handle add to cart
+    a. define react context
+    b. define cart items state
+    c. create add to cart action
+    d. *** create remove from cart action ***
+    e. add reducer
+    f. create store provider
+    g. handle add to cart button
