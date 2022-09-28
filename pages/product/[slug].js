@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import React, {useContext} from "react";
 import { Layout } from "../../components/Layout";
 import { products } from "../../utils/data";
-import { AiOutlineMinus, AiOutlinePlus, AiFillStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 import { Store } from "../../utils/Store";
 
 export default function ProductScreen() {
@@ -63,20 +63,6 @@ export default function ProductScreen() {
                 </li>
                 <li className="py-3">Details: {product.description}</li>
               </ul>
-              {/* set quantity */}
-              <div className="flex items-center justify-between">
-                <h3>Quantity: </h3>
-                <p className="flex p-1.5">
-                  <span className="px-2" >
-                    <AiOutlineMinus className="text-red-600 w-6 h-6" />
-                  </span>
-                  <span className="px-2">( {product.quantity} )</span>
-                  <span className="px-2">
-                    <AiOutlinePlus className="text-green-600 w-6 h-6" />
-                  </span>
-                </p>
-              </div>
-              {/* end quantity */}
             </div>
             <div className="mb-2 flex justify-between">
               <div>Price:</div>
