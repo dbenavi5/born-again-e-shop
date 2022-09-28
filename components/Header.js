@@ -14,10 +14,10 @@ export default function Header() {
         </Link>
         <div className="text-sm tablet:text-xl">
           <Link href="/cart">
-            <a className="p-2 font-extrabold">
+            <a className="p-2 ">
               Cart
               {cart.cartItems.length > 0 && (
-                <span className="ml-1 rounded-full bg-red-600 px-2.5 py-1.5 text-xs font-bold text-white">
+                <span className="ml-1 rounded-full bg-red-600 px-2.5 py-1 text-xs text-white">
                   {/* sum of all quantities in cart */}
                   {cart.cartItems.reduce((acc,i) => acc + i.quantity, 0)}
                 </span>
@@ -25,7 +25,7 @@ export default function Header() {
             </a>
           </Link>
           <Link href="/login">
-            <a className="p-2 font-extrabold">Login</a>
+            <a className="p-2">Login</a>
           </Link>
         </div>
       </nav>

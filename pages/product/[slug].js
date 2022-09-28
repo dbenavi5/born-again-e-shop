@@ -9,6 +9,7 @@ import { Store } from "../../utils/Store";
 
 export default function ProductScreen() {
   const { state, dispatch } = useContext(Store);
+  const router = useRouter();
   const { query } = useRouter();
   const { slug } = query;
 
@@ -28,6 +29,7 @@ export default function ProductScreen() {
       return;
     }
     dispatch({ type: 'CART_ADD_ITEMS', payload: { ...product, quantity } });
+    router.push('/cart')
   }
 
   return (
@@ -65,11 +67,11 @@ export default function ProductScreen() {
               <div className="flex items-center justify-between">
                 <h3>Quantity: </h3>
                 <p className="flex p-1.5">
-                  <span className="px-2" onClick=''>
+                  <span className="px-2" >
                     <AiOutlineMinus className="text-red-600 w-6 h-6" />
                   </span>
-                  <span className="px-2">( 1 )</span>
-                  <span className="px-2" onClick=''>
+                  <span className="px-2">( {product.quantity} )</span>
+                  <span className="px-2">
                     <AiOutlinePlus className="text-green-600 w-6 h-6" />
                   </span>
                 </p>
