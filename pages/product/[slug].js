@@ -1,22 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, {useContext} from "react";
 import { Layout } from "../../components/Layout";
 import { products } from "../../utils/data";
-import { useStateContext } from "../../context/StateContext";
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar } from "react-icons/ai";
+import { Store } from "../../utils/Store";
 
 export default function ProductScreen() {
+  const { state, dispatch } = useContext(Store);
   const { query } = useRouter();
   const { slug } = query;
-  const { decreaseQty, increaseQty, qty, onAdd } = useStateContext();
 
   const product = products.find((p) => p.slug === slug);
   console.log(product);
 
   if (!product) {
     <div>Product Not Found</div>;
+  }
+
+  const addToCartHandler = () => {
+    const existItem = state.cart.cartItems.find((x) => x.slug === product.slug);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+
+    if (product.countInStock < quantity) {
+      alert('Sorry, product out of stock');
+      return;
+    }
+    dispatch({ type: 'CART_ADD_ITEMS', payload: { ...product, quantity } });
   }
 
   return (
@@ -54,11 +65,11 @@ export default function ProductScreen() {
               <div className="flex items-center justify-between">
                 <h3>Quantity: </h3>
                 <p className="flex p-1.5">
-                  <span className="px-2" onClick={decreaseQty}>
+                  <span className="px-2" onClick=''>
                     <AiOutlineMinus className="text-red-600 w-6 h-6" />
                   </span>
-                  <span className="px-2">{qty}</span>
-                  <span className="px-2" onClick={increaseQty}>
+                  <span className="px-2">( 1 )</span>
+                  <span className="px-2" onClick=''>
                     <AiOutlinePlus className="text-green-600 w-6 h-6" />
                   </span>
                 </p>
@@ -75,7 +86,7 @@ export default function ProductScreen() {
             </div>
             <button
               className="primary-button w-full"
-              onClick={() => onAdd(product, qty)}
+              onClick={addToCartHandler}
             >
               Add to cart
             </button>
