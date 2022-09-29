@@ -28,7 +28,7 @@ export default function ProductScreen() {
       alert('Sorry, product out of stock');
       return;
     }
-    dispatch({ type: 'CART_ADD_ITEMS', payload: { ...product, quantity } });
+    dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
     router.push('/cart')
   }
 
