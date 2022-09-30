@@ -1,3 +1,5 @@
+import bcrypt from 'bcryptjs';
+
 export const sliderItems = [
   {
     id: 1,
@@ -26,13 +28,13 @@ export const users = [
   {
     name: "John",
     email: "admin@example.com",
-    password: "123456",
+    password: bcrypt.hashSync("123456"),
     isAdmin: true,
   },
   {
     name: "Jane",
     email: "user@example.com",
-    password: "123456",
+    password: bcrypt.hashSync("123456"),
     isAdmin: false,
   },
 ];

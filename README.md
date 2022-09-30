@@ -46,3 +46,9 @@ description:
     a. install react hook form
     b. create input boxes
     c. add login button
+13. Connect to mongodb 
+    a. install mongoose
+    b. install mongodb or use mongodb atlas
+    c. save connection url in .env file
+    d. create db utils ile
+    e. create sample user
