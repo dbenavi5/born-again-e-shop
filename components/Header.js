@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
+import { useSession } from 'next-auth/react';
 import Link from "next/link";
 import { Store } from "../utils/Store";
 
@@ -8,6 +9,8 @@ export default function Header() {
   const { cart } = state;
   const [cartItemsCount, setCartItemsCount] = useState(0);
 
+  const { status, data: session } = useSession();
+
   useEffect(() => {
     setCartItemsCount(cart.cartItems.reduce((acc, i) => acc + i.quantity, 0));
   }, [cart.cartItems])
@@ -16,7 +19,9 @@ export default function Header() {
     <header>
       <nav className="flex h-14 items-center px-4 justify-between shadow-md">
         <Link href="/">
-          <a className="text-lg tablet:text-4xl font-black">Born Again Thrift</a>
+          <a className="text-lg tablet:text-4xl font-black">
+            Born Again Thrift
+          </a>
         </Link>
         <div className="text-sm tablet:text-xl">
           <Link href="/cart">
@@ -30,9 +35,15 @@ export default function Header() {
               )}
             </a>
           </Link>
-          <Link href="/login">
-            <a className="p-2">Login</a>
-          </Link>
+          {status === "loading" ? (
+            "Loading..."
+          ) : session?.user ? (
+            session.user.name
+          ) : (
+            <Link href="/login">
+              <a className="p-2">Login</a>
+            </Link>
+          )}
         </div>
       </nav>
     </header>

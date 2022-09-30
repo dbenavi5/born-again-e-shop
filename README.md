@@ -52,3 +52,8 @@ description:
     c. save connection url in .env file
     d. create db utils ile
     e. create sample user
+14. Create Login API
+    a. install next-auth
+    b. create nextauth.js
+    c. implement sign in
+    d. use signin in login form
