@@ -57,3 +57,7 @@ description:
     b. create nextauth.js
     c. implement sign in
     d. use signin in login form
+15. Add User Menu
+    a. check user authenication
+    b. install headlessui
+    c. show user menu
