@@ -61,3 +61,6 @@ description:
     a. check user authenication
     b. install headlessui
     c. show user menu
+16. Create Shipping Screen
+    a. display address fields
+    b. save address in context
