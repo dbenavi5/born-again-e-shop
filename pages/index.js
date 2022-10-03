@@ -1,4 +1,4 @@
-import { Layout } from "../components/Layout";
+import Layout from "../components/Layout";
 import ProductItems from "../components/ProductItems";
 import { products } from "../utils/data";
 

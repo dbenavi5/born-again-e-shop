@@ -1,31 +1,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useContext } from 'react'
-import { Layout } from '../components/Layout';
+import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 
-const CartScreen = () => {
+function CartScreen() {
   const { state, dispatch } = useContext(Store);
   const router = useRouter();
-    
+
   const {
     cart: { cartItems },
   } = state;
 
   const removeItemHandler = (item) => {
-    dispatch({ type: 'CART_REMOVE_ITEM', payload: item });
-  }
-  
+    dispatch({ type: "CART_REMOVE_ITEM", payload: item });
+  };
+
   const updateCartHandler = (item, qty) => {
     const quantity = Number(qty);
-    dispatch({ type: 'CART_ADD_ITEM', payload: { ...item, quantity } });
-  }
+    dispatch({ type: "CART_ADD_ITEM", payload: { ...item, quantity } });
+  };
 
   return (
-    <Layout title="shopping-cart">
+    <Layout title="Shopping Cart">
       <h1 className="mb-4 text-lg">Shopping Cart</h1>
       {cartItems.length === 0 ? (
         <div>
@@ -92,8 +92,7 @@ const CartScreen = () => {
               <li>
                 <div className="pb-3 text-xl">
                   Subtotal:(
-                  {cartItems.reduce((acc, curr) => acc + curr.quantity, 0)}) :{" "}
-                  ${" "}
+                  {cartItems.reduce((acc, curr) => acc + curr.quantity, 0)}) : ${" "}
                   {cartItems.reduce(
                     (acc, curr) => acc + curr.quantity * curr.price,
                     0
@@ -115,6 +114,6 @@ const CartScreen = () => {
       )}
     </Layout>
   );
-};
+}
 
 export default dynamic(() => Promise.resolve(CartScreen), { ssr: false });

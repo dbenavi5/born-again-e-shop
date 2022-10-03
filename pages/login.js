@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 import { signIn, useSession } from 'next-auth/react';
-import { Layout } from '../components/Layout';
+import Layout from '../components/Layout';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { getError } from '../utils/error';
@@ -41,7 +41,7 @@ export default function LoginScreen() {
     }
 
   return (
-    <Layout title="login">
+    <Layout title="Login">
       <form
         className="mx-auto max-w-screen-tablet"
         onSubmit={handleSubmit(submitHandler)}

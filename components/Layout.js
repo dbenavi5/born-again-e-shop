@@ -3,7 +3,7 @@ import Head from "next/head";
 import Footer from "./Footer";
 import Header from "./Header";
 
-export const Layout = ({ title, children }) => {
+export default function Layout({ title, children }) {
   return (
     <>
       <Head>
@@ -23,4 +23,4 @@ export const Layout = ({ title, children }) => {
       </div>
     </>
   );
-};
+}
