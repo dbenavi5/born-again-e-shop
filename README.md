@@ -68,6 +68,9 @@ description:
     a. display payment methods
     b. save payment methods in context
 18. Seed Sample Products
-    a. insert sample products to mongodb
-    b. load products from db in home and product screen
-    c. check product count in stock in add to cart
+    a. create product model in mongoose
+    b. insert sample products to mongodb
+19. Load Products MongoDB
+    a. load products in home page from mongodb
+    b. load products in product page from mongodb
+    c. use product api to check count in stock in add to cart
