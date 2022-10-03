@@ -23,7 +23,11 @@ a {
 }
 
 .primary-button {
-  @apply  text-white font-bold rounded bg-indigo-400 py-2 px-4 shadow outline-none hover:bg-indigo-500 active:bg-indigo-600;
+  @apply text-white rounded bg-indigo-400 py-2 px-4 shadow outline-none hover:bg-indigo-500 active:bg-indigo-600;
+}
+
+.default-button{
+  @apply rounded bg-gray-100 text-black py-2 px-4 shadow outline-none hover:bg-gray-200 active:bg-gray-300;
 }
 
 input,
