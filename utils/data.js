@@ -50,7 +50,7 @@ export const products = [
     name: "Poplin Shirt",
     slug: "poplin-shirt",
     category: ["Shirts", 'men'],
-    color: "red",
+    color: ["red","white","green","yellow","blue"],
     size:["M", "L", "S"],
     image: "/images/prada.png",
     price: 70,
@@ -63,7 +63,7 @@ export const products = [
   {
     name: "Lacoste Shirt",
     slug: "lacoste-shirt",
-    category: ["plaid shirt", 'men', 'red/white'],
+    category: ["plaid shirt", 'men'],
     color: ["beige","red","white"],
     size:["M", "L", "S"],
     image: "/images/shirt1.jpg",
@@ -91,8 +91,8 @@ export const products = [
   {
     name: "Women Coat",
     slug: "women-coat",
-    category: ["coat", "women", "khaki"],
-    color: ['brown', 'gray'],
+    category: ["coat", "women"],
+    color: ['brown', 'gray', "khaki"],
     size:["M", "L", "S"],
     image: "/images/women_coat.png",
     price: 90,
@@ -105,7 +105,7 @@ export const products = [
   {
     name: "Golf Pants",
     slug: "golf-pants",
-    category: "Pants",
+    category: ["Pants", 'men', 'Golf Pants'],
     color: ["brown",'white', 'black','gray'],
     size:["M", "L", "S"],
     image: "/images/pants1.jpg",
@@ -119,7 +119,7 @@ export const products = [
   {
     name: "Fit Pants",
     slug: "fit-pants",
-    category: "Pants",
+    category: ["Pants", 'men', 'Golf Pants'],
     color: ["brown",'white', 'black','gray'],
     size:["M", "L", "S"],
     image: "/images/pants2.jpg",
@@ -133,7 +133,7 @@ export const products = [
   {
     name: "Classic Pants",
     slug: "classic-pants",
-    category: "Pants",
+    category: ["Pants",'men', 'Golf Pants'],
     color: ["brown",'white', 'black','gray'],
     size:["M", "L", "S"],
     image: "/images/pants3.jpeg",

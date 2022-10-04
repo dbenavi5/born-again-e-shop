@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 // import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -110,13 +111,13 @@ export default function Footer() {
         <h3 className="font-black mb-3">Useful Links</h3>
         <ul className="m-0 p-0 flex flex-wrap list-none">
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-            Home
+            <Link href='/'>Home</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-            Cart
+          <Link href='/cart'>Cart</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-            Men Fashion
+          <Link href={`/product/category?query=men`}>Mens Fashion</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
             Women Fashion
@@ -125,7 +126,7 @@ export default function Footer() {
             Accessories
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-            My Account
+          <Link href='/profile'>My Account</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
             Order Tracking
