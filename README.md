@@ -87,3 +87,8 @@ description:
     a. add signup api
     b. create register page
     c. call api on form submit
+23. Pay order by paypal
+    a. add paypal button
+    b. handle payment
+    c. create backend api
+    d. update order state
