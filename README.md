@@ -83,3 +83,7 @@ description:
     a. implement backend api for order details
     b. load order data from backend
     c. display order details
+22. Create register screen
+    a. add signup api
+    b. create register page
+    c. call api on form submit
