@@ -111,22 +111,24 @@ export default function Footer() {
         <h3 className="font-black mb-3">Useful Links</h3>
         <ul className="m-0 p-0 flex flex-wrap list-none">
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-            <Link href='/'>Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-          <Link href='/cart'>Cart</Link>
+            <Link href="/cart">Cart</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-          <Link href={`/product/category?query=men`}>Mens Fashion</Link>
+            <Link href={`/product/category?query=men`}>Mens Fashion</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-            Women Fashion
+            <Link href={`/product/category?query=women`}>Womens Fashion</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-            Accessories
+            <Link href={`/product/category?query=accessories`}>
+              Accessories
+            </Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-          <Link href='/profile'>My Account</Link>
+            <Link href="/profile">My Account</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
             Order Tracking
@@ -143,7 +145,7 @@ export default function Footer() {
       {/* right */}
       <div className="flex flex-1 ml-4 flex-col p-4">
         <h3 className="mb-3 font-black">Contact</h3>
-        <div className="mb-5 flex items-center cursor-pointer hover:text-blue-600">
+        <div className="mb-5 flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -160,7 +162,7 @@ export default function Footer() {
           </svg>
           &nbsp;2287 Mission St, SF
         </div>
-        <div className="mb-5 flex items-center cursor-pointer hover:text-blue-600">
+        <div className="mb-5 flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -177,7 +179,7 @@ export default function Footer() {
           </svg>
           &nbsp;+1 234 56 78
         </div>
-        <div className="mb-5 flex items-center cursor-pointer hover:text-blue-600">
+        <div className="mb-5 flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
