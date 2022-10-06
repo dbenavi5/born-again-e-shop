@@ -96,3 +96,12 @@ description:
     a. create order  api
     b.create order history component
     c. fetch orders and display them
+25. Publish app on vercel
+    a. create vercel acct
+    b. connect to github
+    c. set next auth and mongodb in env file
+    d. push code to github
+26. Update user profile
+    a. create profile screen
+    b. show user info
+    c. handle update user info
