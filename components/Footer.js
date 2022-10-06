@@ -104,7 +104,9 @@ export default function Footer() {
             </svg>
           </div>
         </div>
-        <p className="pt-5"><b>Copyright © 2022 Born Again Thrift SF</b></p>
+        <p className="pt-5">
+          <b>Copyright © 2022 Born Again Thrift SF</b>
+        </p>
       </div>
       {/* center */}
       <div className="flex flex-1 ml-4 flex-col p-4">
@@ -131,7 +133,7 @@ export default function Footer() {
             <Link href="/profile">My Account</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
-            Order Tracking
+            <Link href="/order-history">Order History</Link>
           </li>
           <li className="w-1/2 mb-3 cursor-pointer hover:text-blue-600">
             Terms
@@ -193,7 +195,6 @@ export default function Footer() {
           </svg>
           &nbsp;contact@bornagainthriftsf.dev
         </div>
-        
       </div>
     </div>
   );
