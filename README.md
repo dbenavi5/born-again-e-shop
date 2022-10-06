@@ -92,3 +92,7 @@ description:
     b. handle payment
     c. create backend api
     d. update order state
+24. Create order history
+    a. create order  api
+    b.create order history component
+    c. fetch orders and display them
