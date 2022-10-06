@@ -14,12 +14,11 @@ export default function Layout({ title, children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
-    {/* layout begins */}
+      {/* layout begins */}
       <div className="flex min-h-screen flex-col justify-between">
-        <Header/>
+        <Header />
         <main className="container m-auto mt-4 px-4">{children}</main>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

@@ -29,7 +29,11 @@ export default function Home({ products }) {
     <Layout title="Home Page">
       <div className="grid grid-cols-1 gap-4 tablet:grid-cols-3 laptop:grid-cols-4">
         {products.map((product) => (
-          <ProductItems product={product} key={product.slug} addToCartHandler={addToCartHandler}></ProductItems>
+          <ProductItems
+            product={product}
+            key={product.slug}
+            addToCartHandler={addToCartHandler}
+          ></ProductItems>
         ))}
       </div>
     </Layout>
