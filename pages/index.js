@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useContext } from "react";
 import toast from "react-hot-toast";
+import Categories from "../components/Categories";
 import Layout from "../components/Layout";
 import ProductItems from "../components/ProductItems";
 import Slider from "../components/Slider";
@@ -27,6 +28,7 @@ export default function Home({ products }) {
   return (
     <Layout title="Home Page">
       <Slider />
+      <Categories/>
       <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 pt-4 lg:px-24 lg:py-14">
         {products.map((product) => (
           <ProductItems
