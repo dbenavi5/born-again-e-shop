@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import Layout from "../../components/Layout";
 import { AiFillStar } from "react-icons/ai";
 import { Store } from "../../utils/Store";
@@ -10,12 +10,19 @@ import Product from "../../models/Product";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-export default function ProductScreen({product}) {
+export default function ProductScreen({ product }) {
   const { state, dispatch } = useContext(Store);
   const router = useRouter();
 
   if (!product) {
-    return <Layout title="Product Not Found">Product Not Found</Layout>;
+    return (
+      <Layout title="Product Not Found">
+        <div className="p-10 hover:text-indigo-500">
+          <Link href="/">Back to Home</Link>
+        </div>
+        <div className="px-10 pb-20 pt-10 md:p-24 text-center justify-center text-slate-400 text-2xl md:text-4xl">Sorry, Product Not Found</div>
+      </Layout>
+    );
   }
 
   const addToCartHandler = async () => {
@@ -25,20 +32,20 @@ export default function ProductScreen({product}) {
     const { data } = await axios.get(`/api/products/${product._id}`);
 
     if (data.countInStock < quantity) {
-      return toast.error('Sorry, product out of stock');
+      return toast.error("Sorry, product out of stock");
     }
-    dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
-    toast.success('Added to cart successfully');
-    router.push('/cart')
-  }
+    dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
+    toast.success("Added to cart successfully");
+    router.push("/cart");
+  };
 
   return (
-    <Layout title={product.name}>
-      <div className="py-2">
+    <Layout title={product.name} >
+      <div className="pl-10 pt-10 hover:text-indigo-500">
         <Link href="/">Back to Home</Link>
       </div>
-      <div className="grid laptop:grid-cols-4 laptop:gap-3">
-        <div className="laptop:col-span-2 pt-4">
+      <div className="grid lg:grid-cols-4 lg:gap-3 px-24 py-10">
+        <div className="lg:col-span-2 pt-4">
           <Image
             className="w-4/5 h-70v object-cover"
             src={product.image}
@@ -49,7 +56,7 @@ export default function ProductScreen({product}) {
           ></Image>
         </div>
 
-        <div className='py-6'>
+        <div className="py-6">
           <div className="card p-5">
             <div>
               <ul>
@@ -58,8 +65,8 @@ export default function ProductScreen({product}) {
                 </li>
                 <li className="py-2">Brand: {product.brand}</li>
                 <li className="py-2 flex items-center">
-                  <AiFillStar className='text-amber-400' /> &nbsp;{product.rating} of {product.numReviews}{" "}
-                  Reviews
+                  <AiFillStar className="text-amber-400" /> &nbsp;
+                  {product.rating} of {product.numReviews} Reviews
                 </li>
                 <li className="py-3">Details: {product.description}</li>
               </ul>

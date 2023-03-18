@@ -46,10 +46,10 @@ function ProfileScreen() {
   return (
     <Layout title="User Profile">
       <form
-        className="mx-auto max-w-screen-tablet"
+        className="mx-auto max-w-screen-md p-5"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <h1 className="mb-4 text-xl">Update Profile</h1>
+        <h1 className="mb-4 text-xl text-indigo-600">Update Profile</h1>
         <div className="mb-4">
           <label htmlFor="name">Name</label>
           <input

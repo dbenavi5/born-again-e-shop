@@ -105,3 +105,7 @@ description:
     a. create profile screen
     b. show user info
     c. handle update user info
+35. Add Carousel
+    1. create featured products
+    2. feed carousel data
+    3. show popular products

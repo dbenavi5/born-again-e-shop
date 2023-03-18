@@ -49,10 +49,10 @@ export default function RegisterScreen() {
   return (
     <Layout title="Create Account">
       <form
-        className="mx-auto max-w-screen-tablet"
+        className="mx-auto md:max-w-screen p-5 md:px-24 lg:px-52"
         onSubmit={handleSubmit(submitHandler)}
       >
-        <h1 className="mb-4 text-xl">Create Account</h1>
+        <h1 className="mb-4 text-xl text-indigo-600">Create Account</h1>
         <div className="mb-4">
           <label htmlFor="name">Name</label>
           <input

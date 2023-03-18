@@ -9,17 +9,14 @@ export default function ProductItems({ product, addToCartHandler }) {
       <Link href={`/product/${product.slug}`}>
         <a>
           <Image
-            className="rounded shadow object-cover h-64 w-full"
+            className="shadow object-cover h-64 w-full"
             src={product.image}
             alt={product.name}
-            width={500}
-            height={500}
+            width={30}
+            height={30}
             priority={true}
             layout="responsive"
-            sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-          ></Image>
+          />
         </a>
       </Link>
 

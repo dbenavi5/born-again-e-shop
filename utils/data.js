@@ -1,25 +1,65 @@
 import bcrypt from 'bcryptjs';
 
+export const categories = [
+  {
+    id: 1,
+    img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    title: "SHIRT STYLE!",
+    cat: "women"
+  },
+  {
+    id: 2,
+    img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    title: "LOUNGEWEAR LOVE",
+    cat: "coat"
+  },
+  {
+    id: 3,
+    img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    title: "LIGHT JACKETS",
+    cat: "jeans"
+  },
+];
+
 export const sliderItems = [
   {
     id: 1,
-    img: "https://i.ibb.co/HXzfssQ/omoda-nl-lsa-XYTh-4g-Q-unsplash.jpg",
-    title: "SUMMER SALE",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    img: "/assets/brooke.jpeg",
+    title: "--New Items",
+    desc1: "Summer SALE",
+    desc2: "Discover More",
     bg: "f5fafd",
   },
   {
     id: 2,
-    img: "https://i.ibb.co/K5wLKKy/khalid-boutchich.jpg",
+    img: "/assets/chris.jpeg",
     title: "AUTUMN COLLECTION",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    desc1: "DON'T COMPROMISE ON STYLE!",
+    desc2: "GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fcf1ed",
   },
   {
     id: 3,
-    img: "https://i.ibb.co/MN4Wzz5/ussama-azam-xg-NSlx7-Dj-YM-unsplash.jpg",
+    img: "/assets/jc.jpeg",
     title: "LOUNGEWEAR LOVE",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    desc1: "DON'T COMPROMISE ON STYLE!",
+    desc2: "GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    bg: "fbf0f4",
+  },
+  {
+    id: 4,
+    img: "/assets/larm.jpeg",
+    title: "LOUNGEWEAR LOVE",
+    desc1: "DON'T COMPROMISE ON STYLE!",
+    desc2: "GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    bg: "fbf0f4",
+  },
+  {
+    id: 5,
+    img: "/assets/toa.jpeg",
+    title: "LOUNGEWEAR LOVE",
+    desc1: "DON'T COMPROMISE ON STYLE!",
+    desc2: "GET FLAT 30% OFF FOR NEW ARRIVALS.",
     bg: "fbf0f4",
   },
 ];

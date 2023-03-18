@@ -5,10 +5,10 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col tablet:flex-row laptop:flex-row shadow-inner mb-5">
+    <div className="flex flex-col-reverse md:flex-row lg:flex-row shadow-inner mb-5">
       {/* left */}
       <div className="flex flex-1 ml-4 flex-col p-4">
-        <h1 className="font-black text-lg laptop:text-2xl">
+        <h1 className="font-black text-lg lg:text-2xl">
           Born Again Thrift
         </h1>
         <p className="my-5 mx-0">
@@ -17,7 +17,7 @@ export default function Footer() {
           humour, or randomised words which don&apos;t look even slightly
           believable.
         </p>
-        <div className="flex">
+        <div className="flex items-center justify-center">
           <div className="flex w-40px h-40px rounded-full items-center justify-center mr-2 cursor-pointer">
             <svg
               className="w-6 h-6 text-blue-600 fill-current"
@@ -104,7 +104,7 @@ export default function Footer() {
             </svg>
           </div>
         </div>
-        <p className="pt-5">
+        <p className="pt-5 text-slate-400">
           <b>Copyright © 2022 Born Again Thrift SF</b>
         </p>
       </div>

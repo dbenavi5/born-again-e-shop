@@ -17,15 +17,21 @@
     "@paypal/react-paypal-js": "^7.8.1",
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
+    "chart.js": "^4.2.1",
+    "flowbite": "^1.6.4",
+    "flowbite-react": "^0.4.2",
     "js-cookie": "^3.0.1",
     "mongoose": "^6.6.2",
     "next": "12.2.5",
     "next-auth": "^4.12.2",
     "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.36.1",
     "react-hot-toast": "^2.3.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "react-responsive-carousel": "^3.2.23",
+    "tw-elements": "^1.0.0-beta1"
   },
   "devDependencies": {
     "@types/react": "^18.0.18",

@@ -37,13 +37,13 @@ function OrderHistoryScreen() {
   }, []);
   return (
     <Layout title="Order History">
-      <h1 className="mb-4 text-xl">Order History</h1>
+      <h1 className="mb-4 text-xl px-10 pt-5 text-indigo-600">Order History</h1>
       {loading ? (
-        <div>Loading...</div>
+        <div className='px-10'>Loading...</div>
       ) : error ? (
-        <div className="alert-error">{error}</div>
+        <div className="alert-error px-10">{error}</div>
       ) : (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto px-10">
           <table className="min-w-full">
             <thead className="border-b">
               <tr>
