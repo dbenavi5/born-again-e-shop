@@ -105,6 +105,10 @@ description:
     a. create profile screen
     b. show user info
     c. handle update user info
+27. Create Admin Dashboard
+    a. create admin menu
+    b. create admin screen
+    c. implement admin summary api
 35. Add Carousel
     1. create featured products
     2. feed carousel data

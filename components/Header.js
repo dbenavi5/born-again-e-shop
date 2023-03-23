@@ -28,7 +28,9 @@ export default function Header() {
     <header>
       <nav className="flex h-14 items-center px-4 justify-between shadow-md">
         <Link href="/">
-          <a className="text-lg md:text-4xl font-black text-indigo-600">Born Again Style</a>
+          <a className="text-lg md:text-4xl font-black text-indigo-600">
+            Born Again Style
+          </a>
         </Link>
         <div className="text-sm md:text-xl">
           <Link href="/cart">
@@ -71,6 +73,16 @@ export default function Header() {
                     Order History
                   </DropdownLink>
                 </Menu.Item>
+                {session.user.isAdmin && (
+                  <Menu.Item>
+                    <DropdownLink
+                      className="dropdown-link"
+                      href="/admin/dashboard"
+                    >
+                      Admin Dashboard
+                    </DropdownLink>
+                  </Menu.Item>
+                )}
                 <Menu.Item>
                   <a
                     className="dropdown-link last:text-indigo-500"
