@@ -109,6 +109,10 @@ description:
     a. create admin menu
     b. create admin screen
     c. implement admin summary api
+28. List Orders for admin
+    a. create order page
+    b. create orders api
+    c. use api in page
 35. Add Carousel
     1. create featured products
     2. feed carousel data

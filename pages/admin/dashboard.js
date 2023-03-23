@@ -81,8 +81,8 @@ function AdminDashboardScreen() {
 
   return (
     <Layout title="Admin Dashboard">
-      <div className="grid md:grid-cols-4 md:gap-5">
-        <div>
+      <div className="grid md:grid-cols-4 md:gap-5 h-screen">
+        <div className='bg-gray-200'>
           <ul>
             <li>
               <Link href="/admin/dashboard">
