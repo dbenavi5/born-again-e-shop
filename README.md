@@ -113,6 +113,10 @@ description:
     a. create order page
     b. create orders api
     c. use api in page
+29. Deliver order for admin
+    a. create deeliver api
+    b. add deliver button
+    c. implement click handler
 35. Add Carousel
     1. create featured products
     2. feed carousel data

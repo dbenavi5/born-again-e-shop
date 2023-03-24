@@ -3,7 +3,6 @@ import { signIn, useSession } from "next-auth/react";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import Layout from "../components/Layout";
 import { getError } from "../utils/error";
 
 function ProfileScreen() {
@@ -44,7 +43,7 @@ function ProfileScreen() {
   };
 
   return (
-    <Layout title="User Profile">
+    <div title="User Profile">
       <form
         className="mx-auto max-w-screen-md p-5"
         onSubmit={handleSubmit(submitHandler)}
@@ -125,7 +124,7 @@ function ProfileScreen() {
           <button className="primary-button">Update Profile</button>
         </div>
       </form>
-    </Layout>
+    </div>
   );
 }
 

@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
 import CheckoutWizard from '../components/CheckoutWizard';
-import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
 
 export default function PaymentScreen() {
@@ -38,7 +37,7 @@ export default function PaymentScreen() {
         setSelectedPaymentMethod(paymentMethod || '');
     }, [paymentMethod, router, shippingAddress.address]);
   return (
-    <Layout title="Payment Page">
+    <div title="Payment Page">
       <CheckoutWizard activeStep={2} />
       <form className="mx-auto md:max-w-screen px-5 md:px-48" onSubmit={submitHandler}>
         <h1 className="mb-4 text-xl text-indigo-600">Payment Method</h1>
@@ -69,7 +68,7 @@ export default function PaymentScreen() {
           <button className="primary-button">Next</button>
         </div>
       </form>
-    </Layout>
+    </div>
   );
 }
 

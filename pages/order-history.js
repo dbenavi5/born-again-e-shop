@@ -1,7 +1,6 @@
 import axios from 'axios';
 import Link from 'next/link';
 import React, { useEffect, useReducer } from 'react';
-import Layout from '../components/Layout';
 import { getError } from '../utils/error';
 
 function reducer(state, action) {
@@ -36,7 +35,7 @@ function OrderHistoryScreen() {
     fetchOrders();
   }, []);
   return (
-    <Layout title="Order History">
+    <div title="Order History">
       <h1 className="mb-4 text-xl px-10 pt-5 text-indigo-600">Order History</h1>
       {loading ? (
         <div className='px-10'>Loading...</div>
@@ -82,7 +81,7 @@ function OrderHistoryScreen() {
           </table>
         </div>
       )}
-    </Layout>
+    </div>
   );
 }
 

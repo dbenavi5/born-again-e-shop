@@ -15,6 +15,7 @@
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.7",
     "@paypal/react-paypal-js": "^7.8.1",
+    "@syncfusion/ej2-react-popups": "^21.1.35",
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
     "chart.js": "^4.2.1",
@@ -28,7 +29,8 @@
     "react-hook-form": "^7.36.1",
     "react-hot-toast": "^2.3.0",
     "react-icons": "^4.4.0",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.9.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.18",

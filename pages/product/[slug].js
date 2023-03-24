@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
-import Layout from "../../components/Layout";
 import { AiFillStar } from "react-icons/ai";
 import { Store } from "../../utils/Store";
 import db from "../../utils/db";
@@ -16,12 +15,12 @@ export default function ProductScreen({ product }) {
 
   if (!product) {
     return (
-      <Layout title="Product Not Found">
+      <div title="Product Not Found">
         <div className="p-10 hover:text-indigo-500">
           <Link href="/">Back to Home</Link>
         </div>
         <div className="px-10 pb-20 pt-10 md:p-24 text-center justify-center text-slate-400 text-2xl md:text-4xl">Sorry, Product Not Found</div>
-      </Layout>
+      </div>
     );
   }
 
@@ -40,7 +39,7 @@ export default function ProductScreen({ product }) {
   };
 
   return (
-    <Layout title={product.name} >
+    <div title={product.name} >
       <div className="pl-10 pt-10 hover:text-indigo-500">
         <Link href="/">Back to Home</Link>
       </div>
@@ -88,7 +87,7 @@ export default function ProductScreen({ product }) {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
 

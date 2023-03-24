@@ -2,7 +2,6 @@ import axios from "axios";
 import { useContext } from "react";
 import toast from "react-hot-toast";
 import Categories from "../components/Categories";
-import Layout from "../components/Layout";
 import ProductItems from "../components/ProductItems";
 import Slider from "../components/Slider";
 import Product from "../models/Product";
@@ -26,7 +25,7 @@ export default function Home({ products }) {
     toast.success("Product added to cart");
   };
   return (
-    <Layout title="Home Page">
+    <div title="Home Page">
       <Slider />
       <Categories />
       <h3 className='text-center items-center justify-center m-auto p-10 text-slate-500 w-[80%]'>Our Featured <b>Products</b></h3>
@@ -39,7 +38,7 @@ export default function Home({ products }) {
           />
         ))}
       </div>
-    </Layout>
+    </div>
   );
 }
 

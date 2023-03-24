@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useContext, useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
-import CheckoutWizard from '../components/CheckoutWizard'
-import Layout from '../components/Layout'
+import CheckoutWizard from '../components/CheckoutWizard';
 import { getError } from '../utils/error';
 import { Store } from '../utils/Store';
 
@@ -64,7 +63,7 @@ export default function PlaceorderScreen() {
     }
   };
   return (
-    <Layout title="Placeorder">
+    <div title="Placeorder">
       <CheckoutWizard activeStep={3} />
       <h1 className="mb-4 text-xl px-5 md:px-10 text-indigo-600">Place Order</h1>
       {cartItems.length === 0 ? (
@@ -174,7 +173,7 @@ export default function PlaceorderScreen() {
           </div>
         </div>
       )}
-    </Layout>
+    </div>
   );
 }
 PlaceorderScreen.auth = true;

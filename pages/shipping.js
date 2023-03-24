@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import React, { useContext, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import CheckoutWizard from '../components/CheckoutWizard'
-import Layout from '../components/Layout'
 import { Store } from '../utils/Store';
 
 export default function ShippingScreen() {
@@ -56,7 +55,7 @@ export default function ShippingScreen() {
         router.push('/payment');
     };
   return (
-    <Layout title="Shipping Address">
+    <div title="Shipping Address">
       <CheckoutWizard activeStep={1} />
       <form
         className="mx-auto max-w-screen-md p-5"
@@ -137,7 +136,7 @@ export default function ShippingScreen() {
           <button className='primary-button'>Next</button>
         </div>
       </form>
-    </Layout>
+    </div>
   );
 }
 

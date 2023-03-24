@@ -13,7 +13,7 @@ import {
 } from "chart.js";
 
 import { useEffect, useReducer } from "react";
-import Layout from "../../components/Layout";
+import AdminLayout from "../../components/AdminLayout";
 import { getError } from "../../utils/error";
 
 ChartJS.register(
@@ -80,55 +80,57 @@ function AdminDashboardScreen() {
   };
 
   return (
-    <Layout title="Admin Dashboard">
-      <div className="grid md:grid-cols-4 md:gap-5 h-screen">
-        <div className='bg-gray-200'>
-          <ul>
-            <li>
-              <Link href="/admin/dashboard">
-                <a className="font-bold">Dashboard</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/admin/orders">Orders</Link>
-            </li>
-            <li>
-              <Link href="/admin/products">Products</Link>
-            </li>
-            <li>
-              <Link href="/admin/users">Users</Link>
-            </li>
-          </ul>
-        </div>
-
+    <div title="Admin Dashboard">
+      <div className="grid md:grid-cols-4 md:gap-3">
         <div className="md:col-span-3">
-          <h1>Admin Dashboard</h1>
+          <h1 className="mb-4 text-lg ml-5 text-[#1d4ed8]">Admin Dashboard</h1>
           {loading ? (
             <div>Loading...</div>
           ) : error ? (
             <div>{error}</div>
           ) : (
             <div>
-              <div className="grid grid-cols-1 md:grid-cols-4">
-                <div className="card m-5 p-5">
-                  <p className="text-3xl">${summary.ordersPrice}</p>
-                  <p>Sales</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {/* <div className="card m-5 p-5">
+                  <p className="text-3xl">${summary.revenue}</p>
+                  <p>Revenue</p>
                   <Link href="/admin/orders">View sales</Link>
+                </div> */}
+                <div className="card m-5 p-5 bg-[#f8333c]/90 hover:bg-[#f8333c] text-white">
+                  <p className="text-3xl">${summary.ordersPrice}</p>
+                  <p className="text-xl text-gray-200">Sales</p>
+                  <Link href="/admin/orders">
+                    <a className="font-bold italic text-gray-300 hover:text-gray-200">
+                      View sales
+                    </a>
+                  </Link>
                 </div>
-                <div className="card m-5 p-5">
+                <div className="card m-5 p-5 bg-[#3772ff]/90 hover:bg-[#3772ff] text-white">
                   <p className="text-3xl">{summary.ordersCount}</p>
-                  <p>Orders</p>
-                  <Link href="/admin/orders">View orders</Link>
+                  <p className="text-xl text-gray-200">Orders</p>
+                  <Link href="/admin/orders">
+                    <a className="font-bold italic text-gray-300 hover:text-gray-200">
+                      View orders
+                    </a>
+                  </Link>
                 </div>
-                <div className="card m-5 p-5">
+                <div className="card m-5 p-5 . bg-[#2a1e5c]/90 hover:bg-[#2a1e5c] text-white">
                   <p className="text-3xl">{summary.productsCount}</p>
-                  <p>Products</p>
-                  <Link href="/admin/products">View products</Link>
+                  <p className="text-xl text-gray-200">Products</p>
+                  <Link href="/admin/products">
+                    <a className="font-bold italic text-gray-300 hover:text-gray-200">
+                      View products
+                    </a>
+                  </Link>
                 </div>
-                <div className="card m-5 p-5">
+                <div className="card m-5 p-5 bg-[#5c8001]/90 hover:bg-[#5c8001] text-white">
                   <p className="text-3xl">{summary.usersCount}</p>
-                  <p>Users</p>
-                  <Link href="/admin/user">View users</Link>
+                  <p className="text-xl text-gray-200">Customers</p>
+                  <Link href="/admin/user">
+                    <a className="font-bold italic text-gray-300 hover:text-gray-200">
+                      View users
+                    </a>
+                  </Link>
                 </div>
               </div>
               <h2 className="text-2xl">Sales Report</h2>
@@ -140,9 +142,13 @@ function AdminDashboardScreen() {
           )}
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
 
 AdminDashboardScreen.auth = { adminOnly: true };
 export default AdminDashboardScreen;
+
+AdminDashboardScreen.getLayout = function (page, title) {
+  return <AdminLayout title={title}>{page}</AdminLayout>;
+};

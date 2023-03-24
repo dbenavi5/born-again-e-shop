@@ -1,7 +1,7 @@
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useReducer } from "react";
-import Layout from "../../components/Layout";
+import AdminLayout from "../../components/AdminLayout";
 import { getError } from "../../utils/error";
 
 function reducer(state, action) {
@@ -38,28 +38,10 @@ export default function AdminOrderScreen() {
   }, []);
 
   return (
-    <Layout title="Admin Dashboard">
+    <div title="Orders">
       <div className="grid md:grid-cols-4 md:gap-5">
-        <div className="bg-gray-200">
-          <ul>
-            <li>
-              <Link href="/admin/dashboard">Dashboard</Link>
-            </li>
-            <li>
-              <Link href="/admin/orders">
-                <a className="font-bold">Orders</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/admin/products">Products</Link>
-            </li>
-            <li>
-              <Link href="/admin/users">Users</Link>
-            </li>
-          </ul>
-        </div>
         <div className="overflow-x-auto md:col-span-3">
-          <h1 className="mb-4 text-xl">Admin Orders</h1>
+          <h1 className="mb-4 text-lg ml-5 text-[#1d4ed8]">Admin Orders</h1>
           {loading ? (
             <div>Loading...</div>
           ) : error ? (
@@ -70,7 +52,7 @@ export default function AdminOrderScreen() {
                 <thead className="border-b">
                   <tr>
                     <th className="px-5 text-left">ID</th>
-                    <th className="p-5 text-left">USERS</th>
+                    <th className="p-5 text-left">CUSTOMERS</th>
                     <th className="p-5 text-left">DATE</th>
                     <th className="p-5 text-left">TOTAL</th>
                     <th className="p-5 text-left">PAID</th>
@@ -93,12 +75,12 @@ export default function AdminOrderScreen() {
                         $
                         {order.isPaid
                           ? `${order.paidAt.substring(0, 10)}`
-                          : `not paid`}
+                          : "not paid"}
                       </td>
                       <td className="p-5">
                         {order.isDelivered
                           ? `${order.deliveredAt.substring(0, 10)}`
-                          : `not delivered`}
+                          : "not delivered"}
                       </td>
                       <td className="p-5">
                         <Link href={`/order/${order._id}`} passHref>
@@ -113,8 +95,12 @@ export default function AdminOrderScreen() {
           )}
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
 
 AdminOrderScreen.auth = { adminOnly: true };
+
+AdminOrderScreen.getLayout = function (page, title) {
+  return <AdminLayout title={title}>{page}</AdminLayout>;
+};

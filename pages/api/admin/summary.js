@@ -21,7 +21,7 @@ const handler = async (req, res) => {
     {
       $group: {
         _id: null,
-        sales: { $sum: "totalPrice" },
+        sales: { $sum: "$totalPrice" },
       },
     },
   ]);
@@ -37,8 +37,17 @@ const handler = async (req, res) => {
     },
   ]);
 
+  const revenue = (salesData * ordersPrice);
+
   await db.disconnect();
-  res.send({ ordersCount, productsCount, usersCount, ordersPrice, salesData });
+  res.send({
+    ordersCount,
+    productsCount,
+    usersCount,
+    ordersPrice,
+    salesData,
+    revenue,
+  });
 };
 
 export default handler;

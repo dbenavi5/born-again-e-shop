@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useContext } from 'react'
-import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { useRouter } from 'next/router';
@@ -34,7 +33,7 @@ function CartScreen() {
   };
 
   return (
-    <Layout title="Shopping Cart">
+    <div title="Shopping Cart">
       <h1 className="mb-4 text-lg md:text-xl px-5 md:px-24 text-indigo-600">Shopping Cart</h1>
       {cartItems.length === 0 ? (
         <div className='px-5 md:px-24'>
@@ -121,7 +120,7 @@ function CartScreen() {
           </div>
         </div>
       )}
-    </Layout>
+    </div>
   );
 }
 

@@ -3,7 +3,7 @@ import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { Store } from "../utils/Store";
 import { Menu } from "@headlessui/react";
-import DropdownLink from "./DropdownLink";
+// import DropdownLink from "./DropdownLink";
 import Cookies from "js-cookie";
 import { Badge } from "@mui/material";
 
@@ -64,23 +64,20 @@ export default function Header() {
               </Menu.Button>
               <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white shadow-lg">
                 <Menu.Item>
-                  <DropdownLink className="dropdown-link" href="/profile">
-                    Profile
-                  </DropdownLink>
+                  <Link href="/profile">
+                    <a className="dropdown-link">Profile</a>
+                  </Link>
                 </Menu.Item>
                 <Menu.Item>
-                  <DropdownLink className="dropdown-link" href="/order-history">
-                    Order History
-                  </DropdownLink>
+                  <Link href="/order-history">
+                    <a className="dropdown-link">Order History</a>
+                  </Link>
                 </Menu.Item>
                 {session.user.isAdmin && (
                   <Menu.Item>
-                    <DropdownLink
-                      className="dropdown-link"
-                      href="/admin/dashboard"
-                    >
-                      Admin Dashboard
-                    </DropdownLink>
+                    <Link href="/admin/dashboard">
+                      <a className="dropdown-link">Admin Dashboard</a>
+                    </Link>
                   </Menu.Item>
                 )}
                 <Menu.Item>

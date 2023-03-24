@@ -9,7 +9,7 @@ export default function ProductItems({ product, addToCartHandler }) {
       <Link href={`/product/${product.slug}`}>
         <a>
           <Image
-            className="shadow object-cover h-64 w-full"
+            className="shadow object-cover h-64 w-full rounded-lg"
             src={product.image}
             alt={product.name}
             width={30}
