@@ -117,6 +117,10 @@ description:
     a. create deeliver api
     b. add deliver button
     c. implement click handler
+30. List Products for admin
+    a. create product page
+    b. create product api
+    c. use api in page
 35. Add Carousel
     1. create featured products
     2. feed carousel data

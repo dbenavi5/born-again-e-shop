@@ -83,7 +83,7 @@ function AdminDashboardScreen() {
     <div title="Admin Dashboard">
       <div className="grid md:grid-cols-4 md:gap-3">
         <div className="md:col-span-3">
-          <h1 className="mb-4 text-lg ml-5 text-[#1d4ed8]">Admin Dashboard</h1>
+          <h1 className="mb-4 text-lg ml-5 text-blue-500">Admin Dashboard</h1>
           {loading ? (
             <div>Loading...</div>
           ) : error ? (

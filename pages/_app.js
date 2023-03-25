@@ -5,22 +5,26 @@ import { SessionProvider, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import Layout from "../components/Layout";
+import { ContextProvider } from "../context/ContextProvider";
 
 function MyApp({ Component, pageProps: { session, title, ...pageProps } }) {
-  const renderLayout = Component.getLayout ?? ((page) => <Layout title={title}>{page}</Layout>);
+  const renderLayout =
+    Component.getLayout ?? ((page) => <Layout title={title}>{page}</Layout>);
   return (
     <SessionProvider session={session}>
       <StoreProvider>
-        <Toaster />
-        <PayPalScriptProvider deferLoading={true}>
-          {Component.auth ? (
-            <Auth adminOnly={Component.auth.adminOnly}>
-              {renderLayout(<Component {...pageProps} />)}
-            </Auth>
-          ) : (
-            renderLayout(<Component {...pageProps} />)
-          )}
-        </PayPalScriptProvider>
+        <ContextProvider>
+          <Toaster />
+          <PayPalScriptProvider deferLoading={true}>
+            {Component.auth ? (
+              <Auth adminOnly={Component.auth.adminOnly}>
+                {renderLayout(<Component {...pageProps} />)}
+              </Auth>
+            ) : (
+              renderLayout(<Component {...pageProps} />)
+            )}
+          </PayPalScriptProvider>
+        </ContextProvider>
       </StoreProvider>
     </SessionProvider>
   );

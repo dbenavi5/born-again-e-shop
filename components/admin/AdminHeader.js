@@ -1,13 +1,15 @@
 import { AiOutlineMenu } from "react-icons/ai";
 import Tooltip from "@mui/material/Tooltip";
+import { useStateContext } from "../../context/ContextProvider";
+import { useEffect } from "react";
 
-const NavButton = ({ title, placement, customFunc, icon, color, dotColor }) => (
+const NavButton = ({ title, placement, icon, customFunc, color, dotColor}) => (
   <Tooltip title={title} placement={placement}>
     <button
       type="button"
       onClick={() => customFunc()}
       style={{ color }}
-      className="relative text-xl rounded-full p-3 hover:bg-light-gray"
+      className="relative text-xl rounded-full p-3 hover:bg-gray-200"
     >
       <span
         style={{ background: dotColor }}
@@ -19,10 +21,38 @@ const NavButton = ({ title, placement, customFunc, icon, color, dotColor }) => (
 );
 
 function AdminHeader() {
+  const {
+    activeMenu,
+    setActiveMenu,
+    // isClicked,
+    // setIsClicked,
+    // handleClick,
+    screenSize,
+    setScreenSize,
+  } = useStateContext();
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, [setScreenSize]);
+
+  useEffect(() => {
+    if (screenSize <= 900) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(false);
+    }
+  }, [screenSize, setActiveMenu]);
+
+  const handleActiveMenu = () => setActiveMenu(!activeMenu);
+
   return (
-    <div className="flex justify-between p-2 relative">
+    <div className="flex justify-between p-2 ml-6 mr-6 relative">
       <NavButton
         title="Menu"
+        customFunc={handleActiveMenu}
         placement="right-end"
         icon={<AiOutlineMenu color="blue" />}
       />

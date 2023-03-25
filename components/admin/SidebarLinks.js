@@ -4,15 +4,15 @@ import SidebarLink from "./SidebarLink";
 import { useRouter } from "next/router";
 
 function SidebarLinks() {
-  const pathname = useRouter();
-  const isActive = (path) => {
-    return pathname?.split("/").pop() === path;
+  const router = useRouter();
+  const isActive = () => {
+    return router.push('/');
   };
 
   return (
     <nav>
       {sidebarLinks.map((link) => (
-        <SidebarLink key={link} link={link} isActive={isActive(link)} />
+        <SidebarLink key={link} link={link} isActive={()=>isActive()}/>
       ))}
     </nav>
   );
