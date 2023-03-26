@@ -42,7 +42,7 @@ function AdminHeader() {
     if (screenSize <= 900) {
       setActiveMenu(false);
     } else {
-      setActiveMenu(false);
+      setActiveMenu(true);
     }
   }, [screenSize, setActiveMenu]);
 

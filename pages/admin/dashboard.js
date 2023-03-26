@@ -81,7 +81,7 @@ function AdminDashboardScreen() {
 
   return (
     <div title="Admin Dashboard">
-      <div className="grid md:grid-cols-2 md:gap-3 px-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3 md:px-5">
         <div className="md:col-span-3">
           <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">
             Admin Dashboard
