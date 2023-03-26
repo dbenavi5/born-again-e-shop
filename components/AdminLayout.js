@@ -19,7 +19,7 @@ export default function AdminLayout({ title, children }) {
       {/* adminlayout begins */}
       <div className="flex relative">
         {activeMenu ? (
-          <div className="w-72 fixed sidebar bg-gray-200">
+          <div className="w-72 fixed sidebar bg-gray-200 z-[1]">
             <AdminSidebar />
           </div>
         ) : (
@@ -29,14 +29,14 @@ export default function AdminLayout({ title, children }) {
         )}
         <div
           className={`min-h-screen w-full ${
-            activeMenu ? "md:ml-72 " : "flex-2"
+            activeMenu ? "md:ml-72" : "flex-2"
           }`}
         >
-          <div className="fixed md:static w-full">
+          <div className="fixed md:static w-full bg-gray-100 z-[0]">
             <AdminHeader />
           </div>
           <div>
-            <main>{children}</main>
+            <main className='my-24 md:my-4 w-full'>{children}</main>
           </div>
         </div>
       </div>

@@ -51,6 +51,7 @@ export default function AdminSidebar() {
                           ? "activeLink"
                           : "normalLink"
                       }
+                      onClick={handleCloseSidebar}
                     >
                       {link.icon}
                       <span className="capitalize">{link.name}</span>

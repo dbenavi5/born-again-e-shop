@@ -39,7 +39,7 @@ export default function AdminOrderScreen() {
 
   return (
     <div title="Orders">
-      <div className="grid md:grid-cols-4 md:gap-5">
+      <div className="grid md:grid-cols-3 md:gap-5">
         <div className="overflow-x-auto md:col-span-3">
           <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">Admin Orders</h1>
           {loading ? (

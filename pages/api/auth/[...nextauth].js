@@ -7,6 +7,7 @@ import db from '../../../utils/db';
 export default NextAuth({
   session: {
     strategy: "jwt",
+    maxAge: 24 * 60 * 60
   },
   callbacks: {
     async jwt({ token, user }) {
