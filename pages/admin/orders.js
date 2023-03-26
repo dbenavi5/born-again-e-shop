@@ -51,19 +51,19 @@ export default function AdminOrderScreen() {
               <table className="min-w-full">
                 <thead className="border-b">
                   <tr>
-                    <th className="px-5 text-left">ID</th>
-                    <th className="p-5 text-left">CUSTOMERS</th>
-                    <th className="p-5 text-left">DATE</th>
-                    <th className="p-5 text-left">TOTAL</th>
-                    <th className="p-5 text-left">PAID</th>
-                    <th className="p-5 text-left">DELIVERED</th>
-                    <th className="p-5 text-left">ACTION</th>
+                    <th className="px-5 text-left text-blue-600 font-extrabold">ID</th>
+                    <th className="p-5 text-left text-blue-500">CUSTOMERS</th>
+                    <th className="p-5 text-left text-blue-500">DATE</th>
+                    <th className="p-5 text-left text-blue-500">TOTAL</th>
+                    <th className="p-5 text-left text-blue-500">PAID</th>
+                    <th className="p-5 text-left text-blue-500">DELIVERED</th>
+                    <th className="p-5 text-left text-blue-500">ACTION</th>
                   </tr>
                 </thead>
                 <tbody>
                   {orders.map((order) => (
                     <tr key={order._id} className="border-b">
-                      <td className="p-5">{order._id.substring(20, 24)}</td>
+                      <td className="p-5 font-extrabold">{order._id.substring(20, 24)}</td>
                       <td className="p-5">
                         {order.user ? order.user.name : "DELETED USER"}
                       </td>
@@ -72,7 +72,6 @@ export default function AdminOrderScreen() {
                       </td>
                       <td className="p-5">${order.totalPrice}</td>
                       <td className="p-5">
-                        $
                         {order.isPaid
                           ? `${order.paidAt.substring(0, 10)}`
                           : "not paid"}
@@ -84,7 +83,7 @@ export default function AdminOrderScreen() {
                       </td>
                       <td className="p-5">
                         <Link href={`/order/${order._id}`} passHref>
-                          <a>Details</a>
+                          <a className='default-button'>Details</a>
                         </Link>
                       </td>
                     </tr>

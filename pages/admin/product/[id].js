@@ -264,7 +264,7 @@ function AdminProductEditPage() {
                 </div>
                 <button
                   disabled={loadingUpdate}
-                  className="primary-button"
+                  className="create-button"
                 >
                   {loadingUpdate ? "Loading" : "Update"}
                 </button>

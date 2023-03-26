@@ -45,6 +45,16 @@ a {
 .default-button{
   @apply rounded bg-gray-100 text-black py-2 px-4 shadow outline-none hover:bg-gray-200 active:bg-gray-300;
 }
+.edit-button{
+  @apply rounded bg-yellow-300 text-black py-2 px-4 shadow outline-none hover:bg-yellow-400 active:bg-yellow-500;
+}
+
+.delete-button{
+  @apply rounded bg-red-500 text-white py-2 px-4 shadow outline-none hover:bg-red-600 active:bg-red-700;
+}
+.create-button{
+  @apply rounded bg-green-600 text-white py-2 px-4 shadow outline-none hover:bg-green-500 active:bg-green-700;
+}
 
 input,
 select,

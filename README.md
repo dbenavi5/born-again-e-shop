@@ -130,7 +130,11 @@ description:
     b. get cloudinary keys
     c.  create upload api
     d. upload files in edit page
-33. 
+33. Create and Delete Products
+    a. add create add button
+    b. build new product api
+    c. add handler for delete
+    d. implement delete api
 35. Add Carousel
     1. create featured products
     2. feed carousel data
