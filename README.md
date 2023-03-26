@@ -128,7 +128,7 @@ description:
 32. Upload Product Image
     a. create cloudinary account
     b. get cloudinary keys
-    c. create upload api
+    c.  create upload api
     d. upload files in edit page
 33. 
 35. Add Carousel

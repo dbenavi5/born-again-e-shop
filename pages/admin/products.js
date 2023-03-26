@@ -38,7 +38,7 @@ export default function AdminProductsScreen() {
   }, []);
   return (
     <div title="Admin Products">
-      <div className="grid md:grid-cols-3 md:gap-5">
+      <div className="grid md:grid-cols-3 md:gap-5 md:px-5">
         <div className="overflow-x-auto md:col-span-3">
           <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">
             Admin Products
@@ -71,9 +71,17 @@ export default function AdminProductsScreen() {
                       <td className="p-5">{product.countInStock}</td>
                       <td className="p-5">{product.rating}</td>
                       <td className="p-5">
-                        <Link href={`/admin/product/${product._id}`}>Edit</Link>
-                        &nbsp;
-                        <button>Delete</button>
+                        <div className="flex flex-row md:flex-col">
+                          <Link href={`/admin/product/${product._id}`}>
+                            <a type="button" className="default-button text-center">
+                              Edit
+                            </a>
+                          </Link>
+                          &nbsp;
+                          <button className="default-button" type="button">
+                            Delete
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))}

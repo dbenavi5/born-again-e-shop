@@ -81,13 +81,15 @@ function AdminDashboardScreen() {
 
   return (
     <div title="Admin Dashboard">
-      <div className="grid md:grid-cols-2 md:gap-3">
+      <div className="grid md:grid-cols-2 md:gap-3 px-5">
         <div className="md:col-span-3">
-          <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">Admin Dashboard</h1>
+          <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">
+            Admin Dashboard
+          </h1>
           {loading ? (
             <div>Loading...</div>
           ) : error ? (
-            <div>{error}</div>
+            <div className="alert-error">{error}</div>
           ) : (
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -133,10 +135,13 @@ function AdminDashboardScreen() {
                   </Link>
                 </div>
               </div>
-              <h2 className="text-2xl">Sales Report</h2>
+              <h2 className="text-2xl px-10 text-center">
+                Sales Report
+              </h2>
               <Bar
                 options={{ legend: { display: true, position: "right" } }}
                 data={data}
+                className="px-10"
               />
             </div>
           )}
