@@ -121,6 +121,16 @@ description:
     a. create product page
     b. create product api
     c. use api in page
+31. Create Product Edit Page
+    a. create edit page
+    b. create api for product
+    c. show product data in form
+32. Upload Product Image
+    a. create cloudinary account
+    b. get cloudinary keys
+    c. create upload api
+    d. upload files in edit page
+33. 
 35. Add Carousel
     1. create featured products
     2. feed carousel data
