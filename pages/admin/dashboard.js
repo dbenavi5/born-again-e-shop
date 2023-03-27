@@ -83,7 +83,7 @@ function AdminDashboardScreen() {
     <div title="Admin Dashboard">
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3 md:px-5">
         <div className="md:col-span-3">
-          <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">
+          <h1 className="my-4 text-lg ml-5 text-blue-500 font-extrabold">
             Admin Dashboard
           </h1>
           {loading ? (
@@ -98,7 +98,7 @@ function AdminDashboardScreen() {
                   <p>Revenue</p>
                   <Link href="/admin/orders">View sales</Link>
                 </div> */}
-                <div className="card m-5 p-5 bg-[#f8333c]/90 hover:bg-[#f8333c] text-white">
+                <div className="card m-5 p-5 bg-[#f8333c]/90 hover:bg-[#f8333c] text-white dark:hover:border-zinc-300 hover:border hover:border-slate-900">
                   <p className="text-3xl">${summary.ordersPrice}</p>
                   <p className="text-xl text-gray-200">Sales</p>
                   <Link href="/admin/orders">
@@ -107,7 +107,7 @@ function AdminDashboardScreen() {
                     </a>
                   </Link>
                 </div>
-                <div className="card m-5 p-5 bg-[#3772ff]/90 hover:bg-[#3772ff] text-white">
+                <div className="card m-5 p-5 bg-[#3772ff]/90 hover:bg-[#3772ff] text-white dark:hover:border-zinc-300 hover:border hover:border-slate-900">
                   <p className="text-3xl">{summary.ordersCount}</p>
                   <p className="text-xl text-gray-200">Orders</p>
                   <Link href="/admin/orders">
@@ -116,7 +116,7 @@ function AdminDashboardScreen() {
                     </a>
                   </Link>
                 </div>
-                <div className="card m-5 p-5 . bg-[#2a1e5c]/90 hover:bg-[#2a1e5c] text-white">
+                <div className="card m-5 p-5 . bg-[#2a1e5c]/90 hover:bg-[#2a1e5c] text-white dark:hover:border-zinc-300 hover:border hover:border-slate-900">
                   <p className="text-3xl">{summary.productsCount}</p>
                   <p className="text-xl text-gray-200">Products</p>
                   <Link href="/admin/products">
@@ -125,19 +125,17 @@ function AdminDashboardScreen() {
                     </a>
                   </Link>
                 </div>
-                <div className="card m-5 p-5 bg-[#5c8001]/90 hover:bg-[#5c8001] text-white">
+                <div className="card m-5 p-5 bg-[#5c8001]/90 hover:bg-[#5c8001] text-white dark:hover:border-zinc-300 hover:border hover:border-slate-900">
                   <p className="text-3xl">{summary.usersCount}</p>
                   <p className="text-xl text-gray-200">Users</p>
-                  <Link href="/admin/user">
+                  <Link href="/admin/users">
                     <a className="font-bold italic text-gray-300 hover:text-gray-200">
                       View users
                     </a>
                   </Link>
                 </div>
               </div>
-              <h2 className="text-2xl px-10 text-center">
-                Sales Report
-              </h2>
+              <h2 className="text-2xl px-10 text-center">Sales Report</h2>
               <Bar
                 options={{ legend: { display: true, position: "right" } }}
                 data={data}
@@ -155,5 +153,9 @@ AdminDashboardScreen.auth = { adminOnly: true };
 export default AdminDashboardScreen;
 
 AdminDashboardScreen.getLayout = function (page, title) {
-  return <AdminLayout title={title}>{page}</AdminLayout>;
+  return (
+    <AdminLayout title={title}>
+      {page}
+    </AdminLayout>
+  );
 };

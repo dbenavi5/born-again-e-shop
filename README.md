@@ -143,3 +143,7 @@ description:
     1. create featured products
     2. feed carousel data
     3. show popular products
+36. Create Search Page
+    a. create filters
+    b. list products
+    c. show filters

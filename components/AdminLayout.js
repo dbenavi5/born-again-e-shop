@@ -17,9 +17,9 @@ export default function AdminLayout({ title, children }) {
       </Head>
 
       {/* adminlayout begins */}
-      <div className="flex relative">
+      <div className="flex relative bg-slate-200 dark:bg-zinc-900 dark:text-zinc-300 text-slate-700">
         {activeMenu ? (
-          <div className="w-72 fixed sidebar bg-gray-200 z-[1]">
+          <div className="w-72 fixed sidebar bg-slate-200 dark:bg-zinc-900 z-[1] border-r-[1px] border-zinc-600">
             <AdminSidebar />
           </div>
         ) : (
@@ -32,7 +32,7 @@ export default function AdminLayout({ title, children }) {
             activeMenu ? "md:ml-72" : "flex-2"
           }`}
         >
-          <div className="fixed md:static w-full bg-gray-100 z-[0]">
+          <div className="fixed md:static w-full dark:bg-zinc-900 bg-slate-200 z-[0] border-b-[1px] border-zinc-600">
             <AdminHeader />
           </div>
           <div>

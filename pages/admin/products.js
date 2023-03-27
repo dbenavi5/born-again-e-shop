@@ -54,7 +54,7 @@ export default function AdminProductsScreen() {
     }
     try {
       dispatch({ type: "CREATE_REQUEST" });
-      const { data } = await axios.post(`/api/admin/products`);
+      const { data } = await axios.post(`/api/admin/products`, {});
       dispatch({ type: "CREATE_SUCCESS" });
       toast.success("Product created successfully");
       router.push(`/admin/product/${data.product._id}`);
@@ -98,7 +98,7 @@ export default function AdminProductsScreen() {
 
   return (
     <div title="Admin Products">
-      <div className="grid md:grid-cols-3 md:gap-5 md:px-5">
+      <div className="grid md:grid-cols-3 md:gap-5 px-5">
         <div className="overflow-x-auto md:col-span-3">
           <div className="flex justify-between">
             <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">
@@ -123,7 +123,7 @@ export default function AdminProductsScreen() {
           ) : (
             <div className="overflow-x-auto">
               <table className="min-w-full">
-                <thead className="border-b">
+                <thead className="border-b border-slate-900 dark:border-zinc-500">
                   <tr>
                     <th className="px-5 text-left text-blue-600 font-extrabold">
                       ID
@@ -138,7 +138,7 @@ export default function AdminProductsScreen() {
                 </thead>
                 <tbody>
                   {products.map((product) => (
-                    <tr key={product._id} className="border-b">
+                    <tr key={product._id} className="border-b border-slate-900 dark:border-zinc-500 hover:bg-slate-300/50 dark:hover:bg-zinc-700/50">
                       <td className="p-5 font-extrabold">
                         {product._id.substring(20, 24)}
                       </td>

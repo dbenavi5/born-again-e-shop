@@ -1,4 +1,4 @@
-import { GrTransaction } from "react-icons/gr";
+import { TbMenuOrder } from "react-icons/tb";
 import { MdOutlineDashboard } from "react-icons/md";
 import { BiPurchaseTag } from "react-icons/bi";
 import { HiOutlineUserGroup } from "react-icons/hi";
@@ -21,7 +21,7 @@ export const sidebarLinks = [
     links: [
       {
         name: "Transactions",
-        icon: <GrTransaction />,
+        icon: <TbMenuOrder/>,
         link:'admin/orders'
       },
       {

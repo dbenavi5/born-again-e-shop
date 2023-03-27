@@ -27,19 +27,24 @@ a {
 }
 
 .card {
-  @apply mb-5 block border-none border-gray-200 shadow-md rounded-lg;
+  @apply mb-5 block shadow-md rounded-lg;
 }
 
 .activeLink {
-  @apply flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-base text-blue-500 font-bold m-2 underline cursor-pointer;
+  @apply flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-base 
+  text-blue-500 font-bold m-2 underline cursor-pointer;
 }
 
 .normalLink {
-  @apply flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-base text-gray-700 hover:bg-gray-200 m-2 cursor-pointer;
+  @apply flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-base 
+  text-slate-600 dark:text-zinc-500 hover:dark:text-zinc-300 hover:bg-slate-300 
+  dark:hover:bg-zinc-800 dark:hover:border-zinc-300 hover:border 
+  hover:border-slate-700 m-2 cursor-pointer;
 }
 
 .primary-button {
-  @apply text-white rounded !bg-indigo-400 py-2 px-4 shadow outline-none hover:!bg-indigo-500 active:!bg-indigo-600;
+  @apply text-white rounded !bg-indigo-400 py-2 px-4 shadow outline-none 
+  hover:!bg-indigo-500 active:!bg-indigo-600;
 }
 
 .default-button{

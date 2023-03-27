@@ -69,7 +69,7 @@ function AdminUsersScreen() {
   };
   return (
     <div title="Users">
-      <div className="grid md:grid-cols-3 md:gap-5">
+      <div className="grid md:grid-cols-3 md:gap-5 px-5">
         <div className="overflow-x-auto md:col-span-3">
           <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">Users</h1>
           {loadingDelete && <div>Deleting...</div>}
@@ -80,7 +80,7 @@ function AdminUsersScreen() {
           ) : (
             <div className="overflow-x-auto">
               <table className="min-w-full">
-                <thead className="border-b">
+                <thead className="border-b border-slate-900 dark:border-zinc-500">
                   <tr>
                     <th className="px-5 text-left text-blue-600 font-extrabold">ID</th>
                     <th className="p-5 text-left text-blue-500">NAME</th>
@@ -91,7 +91,7 @@ function AdminUsersScreen() {
                 </thead>
                 <tbody>
                   {users.map((user) => (
-                    <tr key={user._id} className="border-b">
+                    <tr key={user._id} className="border-b border-slate-900 dark:border-zinc-500 hover:bg-slate-300/50 dark:hover:bg-zinc-700/50">
                       <td className=" p-5 font-extrabold">{user._id.substring(20, 24)}</td>
                       <td className=" p-5 ">{user.name}</td>
                       <td className=" p-5 ">{user.email}</td>

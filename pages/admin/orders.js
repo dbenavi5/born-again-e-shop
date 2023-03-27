@@ -49,7 +49,7 @@ export default function AdminOrderScreen() {
           ) : (
             <div className="overflow-x-auto">
               <table className="min-w-full">
-                <thead className="border-b">
+                <thead className="border-b border-zinc-500">
                   <tr>
                     <th className="px-5 text-left text-blue-600 font-extrabold">ID</th>
                     <th className="p-5 text-left text-blue-500">USERS</th>
@@ -62,7 +62,7 @@ export default function AdminOrderScreen() {
                 </thead>
                 <tbody>
                   {orders.map((order) => (
-                    <tr key={order._id} className="border-b">
+                    <tr key={order._id} className="border-b border-slate-900 dark:border-zinc-500 hover:bg-slate-300/50 dark:hover:bg-zinc-700/50">
                       <td className="p-5 font-extrabold">{order._id.substring(20, 24)}</td>
                       <td className="p-5">
                         {order.user ? order.user.name : "DELETED USER"}
@@ -76,7 +76,7 @@ export default function AdminOrderScreen() {
                           ? `${order.paidAt.substring(0, 10)}`
                           : "not paid"}
                       </td>
-                      <td className="p-5">
+                      <td className="p-5 italic">
                         {order.isDelivered
                           ? `${order.deliveredAt.substring(0, 10)}`
                           : "not delivered"}

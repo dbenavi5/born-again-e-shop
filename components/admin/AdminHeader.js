@@ -9,7 +9,7 @@ const NavButton = ({ title, placement, icon, customFunc, color, dotColor}) => (
       type="button"
       onClick={() => customFunc()}
       style={{ color }}
-      className="relative text-xl rounded-full p-3 hover:bg-gray-200"
+      className="relative text-xl rounded-full p-3 hover:bg-slate-300 dark:hover:bg-zinc-800"
     >
       <span
         style={{ background: dotColor }}
@@ -54,7 +54,7 @@ function AdminHeader() {
         title="Menu"
         customFunc={handleActiveMenu}
         placement="right-end"
-        icon={<AiOutlineMenu color="blue" />}
+        icon={<AiOutlineMenu color="#3b82f6" />}
       />
     </div>
   );
