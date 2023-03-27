@@ -127,7 +127,7 @@ function AdminDashboardScreen() {
                 </div>
                 <div className="card m-5 p-5 bg-[#5c8001]/90 hover:bg-[#5c8001] text-white">
                   <p className="text-3xl">{summary.usersCount}</p>
-                  <p className="text-xl text-gray-200">Customers</p>
+                  <p className="text-xl text-gray-200">Users</p>
                   <Link href="/admin/user">
                     <a className="font-bold italic text-gray-300 hover:text-gray-200">
                       View users

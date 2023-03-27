@@ -102,7 +102,7 @@ export default function AdminProductsScreen() {
         <div className="overflow-x-auto md:col-span-3">
           <div className="flex justify-between">
             <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">
-              Admin Products
+              Products
             </h1>
             {loadingDelete && <div>Deleting item...</div>}
             <button

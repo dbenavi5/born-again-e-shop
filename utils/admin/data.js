@@ -1,8 +1,8 @@
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { FiShoppingBag } from "react-icons/fi";
-import { IoMdContacts } from "react-icons/io";
-import { RiContactsLine } from "react-icons/ri";
-import { FaStore } from "react-icons/fa";
+import { GrTransaction } from "react-icons/gr";
+import { MdOutlineDashboard } from "react-icons/md";
+import { BiPurchaseTag } from "react-icons/bi";
+import { HiOutlineUserGroup } from "react-icons/hi";
+import { MdStorefront } from "react-icons/md";
 
 export const sidebarLinks = [
   {
@@ -10,7 +10,7 @@ export const sidebarLinks = [
     links: [
       {
         name: "dashboard",
-        icon: <FiShoppingBag />,
+        icon: <MdOutlineDashboard />,
         link: "admin/dashboard",
       },
     ],
@@ -20,18 +20,18 @@ export const sidebarLinks = [
     title: "Pages",
     links: [
       {
-        name: "orders",
-        icon: <AiOutlineShoppingCart />,
+        name: "Transactions",
+        icon: <GrTransaction />,
         link:'admin/orders'
       },
       {
         name: "products",
-        icon: <IoMdContacts />,
+        icon: <BiPurchaseTag />,
         link: "admin/products",
       },
       {
-        name: "customers",
-        icon: <RiContactsLine />,
+        name: "users",
+        icon: <HiOutlineUserGroup />,
         link: "admin/users",
       },
     ],
@@ -41,7 +41,7 @@ export const sidebarLinks = [
     links:[
       {
         name: 'store',
-        icon: <FaStore/>,
+        icon: <MdStorefront/>,
         link: "",
       }
     ]

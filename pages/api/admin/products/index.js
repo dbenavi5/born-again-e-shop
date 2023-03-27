@@ -23,7 +23,7 @@ const postHandler = async (req, res) => {
   const newProduct = new Product({
     name: "sample name",
     slug: "sample-name-" + Math.random(),
-    image: "/images/shirt1.jpg",
+    image: "/assets/florencia_simonini_PDZAM_Yvdu_Vk_unsplash_66cdf58cf2.jpeg",
     price: 0,
     category: "sample category",
     brand: "sample brand",

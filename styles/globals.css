@@ -27,7 +27,7 @@ a {
 }
 
 .card {
-  @apply mb-5 block border border-gray-200 shadow-md rounded-lg;
+  @apply mb-5 block border-none border-gray-200 shadow-md rounded-lg;
 }
 
 .activeLink {

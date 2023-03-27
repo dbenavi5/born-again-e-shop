@@ -135,6 +135,10 @@ description:
     b. build new product api
     c. add handler for delete
     d. implement delete api
+34. List Users for Admin
+    a. create users page
+    b. create users api
+    c. use api in page
 35. Add Carousel
     1. create featured products
     2. feed carousel data

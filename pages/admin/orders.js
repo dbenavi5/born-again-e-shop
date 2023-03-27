@@ -38,10 +38,10 @@ export default function AdminOrderScreen() {
   }, []);
 
   return (
-    <div title="Orders">
+    <div title="Transactions">
       <div className="grid md:grid-cols-3 md:gap-5 px-5">
         <div className="overflow-x-auto md:col-span-3">
-          <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">Admin Orders</h1>
+          <h1 className="mb-4 text-lg ml-5 text-blue-500 font-extrabold">Transactions</h1>
           {loading ? (
             <div>Loading...</div>
           ) : error ? (
@@ -52,7 +52,7 @@ export default function AdminOrderScreen() {
                 <thead className="border-b">
                   <tr>
                     <th className="px-5 text-left text-blue-600 font-extrabold">ID</th>
-                    <th className="p-5 text-left text-blue-500">CUSTOMERS</th>
+                    <th className="p-5 text-left text-blue-500">USERS</th>
                     <th className="p-5 text-left text-blue-500">DATE</th>
                     <th className="p-5 text-left text-blue-500">TOTAL</th>
                     <th className="p-5 text-left text-blue-500">PAID</th>
