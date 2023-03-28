@@ -24,6 +24,7 @@ export const categories = [
 export const sliderItems = [
   {
     id: 1,
+    cloudSrc:'/v1679976053/brooke_sm7otp.jpg',
     img: "/assets/brooke.jpeg",
     title: "--New Items",
     desc1: "Summer SALE",
@@ -32,6 +33,7 @@ export const sliderItems = [
   },
   {
     id: 2,
+    cloudSrc:'/v1679976051/chris_wbuxdk.jpg',
     img: "/assets/chris.jpeg",
     title: "AUTUMN COLLECTION",
     desc1: "DON'T COMPROMISE ON STYLE!",
@@ -40,6 +42,7 @@ export const sliderItems = [
   },
   {
     id: 3,
+    cloudSrc:'/v1679976052/jc_jj84bf.jpg',
     img: "/assets/jc.jpeg",
     title: "LOUNGEWEAR LOVE",
     desc1: "DON'T COMPROMISE ON STYLE!",
@@ -48,6 +51,7 @@ export const sliderItems = [
   },
   {
     id: 4,
+    cloudSrc:'/v1679976053/larm_rrldew.jpg',
     img: "/assets/larm.jpeg",
     title: "LOUNGEWEAR LOVE",
     desc1: "DON'T COMPROMISE ON STYLE!",
@@ -56,6 +60,7 @@ export const sliderItems = [
   },
   {
     id: 5,
+    cloudSrc:'/v1679976049/toa_rjzeos.jpg',
     img: "/assets/toa.jpeg",
     title: "LOUNGEWEAR LOVE",
     desc1: "DON'T COMPROMISE ON STYLE!",

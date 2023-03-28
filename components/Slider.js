@@ -11,8 +11,6 @@ export default function Slider() {
       showThumbs={false}
       showIndicators={true}
       showStatus={false}
-      autoPlay={true}
-      interval={5000}
       className="hidden md:flex py-2"
       renderArrowPrev={(onClickHandler) => (
         <div
@@ -33,14 +31,17 @@ export default function Slider() {
     >
       {sliderItems.map((item) => (
         <div key={`carousel-image-${item.id}`}>
-          <Image
-            src={item.img}
-            alt={`carousel-${item.id}`}
-            width={8000}
-            height={4000}
-            priority={true}
-            objectFit="cover"
-          />
+          <div className="relative w-full h-96 md:h-[450px] lg:h-[650px]">
+            <Image
+              src={item.img}
+              alt={`carousel-${item.id}`}
+              layout="fill"
+              priority
+              objectFit="cover"
+              placeholder="blur"
+              blurDataURL={item.img}
+            />
+          </div>
           <div className="absolute z-[10] p-5 rounded-sm align-left text-white top-[46%] left-0 right-1/2 mx-auto my-0 max-w-[240px] bg-[#000000]/25">
             <p className="text-sm md:text-xl text-indigo-400">{item.desc1}</p>
             <p className="text-md md:text-3xl">{item.title}</p>

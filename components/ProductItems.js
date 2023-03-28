@@ -7,17 +7,17 @@ export default function ProductItems({ product, addToCartHandler }) {
   return (
     <div className="card">
       <Link href={`/product/${product.slug}`}>
-        <a>
+        <div className="relative h-64 w-full">
           <Image
-            className="shadow object-cover h-64 w-full rounded-lg"
             src={product.image}
             alt={product.name}
-            width={30}
-            height={30}
-            priority={true}
-            layout="responsive"
+            priority
+            layout="fill"
+            objectFit="cover"
+            placeholder="blur"
+            blurDataURL={product.image}
           />
-        </a>
+        </div>
       </Link>
 
       <div className="flex flex-col items-center justify-center p-5">
